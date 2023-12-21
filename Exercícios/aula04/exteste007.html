@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relembrando Eventos DOM</title>
+    <style>
+        #bloco {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(21, 95, 73);
+            font: bold 20px Arial;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 200px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="bloco">Olha que legal!</p>
+    </div>
+
+    <script>
+        var b = window.document.getElementById("bloco")
+
+        b.addEventListener("click", clicar)
+        b.addEventListener("mouseenter", entrar)
+        b.addEventListener("mouseout", sair)
+
+        function clicar() {
+            b.innerText = "Clicou!"
+            b.style.background = 'rgb(143, 4, 27)'
+        }
+
+        function entrar() {
+            b.innerText = "Entrou!"
+            b.style.background = 'blueviolet'
+        }
+
+        function sair() {
+            b.innerText = "Saiu!"
+            b.style.background = 'purple'
+        }
+    </script>
+</body>
+
+</html>
