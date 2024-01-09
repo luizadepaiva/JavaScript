@@ -2,14 +2,14 @@ function carregar(){
     //Declarando variáveis
 
     var subt = window.document.querySelector('div#subtitulo')
-    var imag = window.document.querySelector('div#imagem')
+    var imag = window.document.getElementById('imagem')
     var mudacor = window.document.querySelector('section#cordefundo')
 
     //Hora do sistema    
     var data = new Date()
     //var hora = data.getHours()
 
-    var hora = 18 0    
+    var hora = 21   
 
     //Mostrando a hora
     subt.innerHTML = (`Agora são ${hora} horas!`)
@@ -18,7 +18,8 @@ function carregar(){
     if (hora >=0 && hora < 12) {
         mudacor.style.backgroundColor = "#FED388"
         subt.style.color = "black"
-        imag.src='imagemmanha.png'
+        imag.src = 'imagemmanha.png'
+        subt = "Bom dia!"
 
 
     } else if (hora >= 12 && hora < 18) {
