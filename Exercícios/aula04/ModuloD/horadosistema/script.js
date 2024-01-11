@@ -7,9 +7,9 @@ function carregar(){
 
     //Hora do sistema    
     var data = new Date()
-    //var hora = data.getHours()
+    var hora = data.getHours()
 
-    var hora = 21   
+    //var hora = 21   
 
     //Mostrando a hora
     subt.innerHTML = (`Agora são ${hora} horas!`)
