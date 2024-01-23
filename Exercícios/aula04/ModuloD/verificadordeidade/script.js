@@ -50,7 +50,6 @@ function verificar(){
     
     resultado.style.textAlign='center'
     resultado.innerHTML = (`${gen} com ${idade} anos de idade.`)
-    resultado.setAttribute=('imagem')
     }
 
 
