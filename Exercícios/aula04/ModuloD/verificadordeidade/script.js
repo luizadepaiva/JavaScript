@@ -1,4 +1,7 @@
 function verificar(){
+
+    //Muda foto
+    var imag = window.document.getElementById('imagem')
     
     // Declara resultado
     var resultado = window.document.getElementById('resultado')
@@ -19,12 +22,36 @@ function verificar(){
         // Verifica gênero e idade 
     var genero = document.getElementsByName('genero')
     var gen = ''
+
+
     if (genero[0].checked) {
         gen = 'Mulher'
-    } else {
+        if(idade >= 0 && idade < 10){
+            imag.src= 'imagens/bu.jpg'
+        } else if (idade < 21){
+            imag.src='imagens/violeta.jpg'
+        } else if (idade < 50) {
+           imag.src='imagens/mulher.png'
+        } else {
+            imag.src='imagens/idosa.jpeg'
+        }
+    } else if (genero[1].checked){
         gen = 'Homem'
+        if(idade >= 0 && idade < 10){
+            imag.src='imagens/menino.jpg'
+        } else if (idade < 21){
+            imag.src='imagens/trunks.jpeg'
+        } else if (idade < 60) {
+            imag.src='imagens/homem.jpg'
+        } else {
+            imag.src='imagens/homemidoso.jpg'
+        }
     }
     
-    resultado.innerHTML = (`${gen} com ${idade} anos de idade.`) 
+    resultado.style.textAlign='center'
+    resultado.innerHTML = (`${gen} com ${idade} anos de idade.`)
+    resultado.setAttribute=('imagem')
     }
+
+
 }
